@@ -1,6 +1,9 @@
 pipeline {
     agent any // Use any available agent
 
+    tools {
+        maven 'Maven 3.9.9'
+    }
     stages {
         // Stage 0: Cloning the GitHub repository
         stage('Clone') {
@@ -15,7 +18,7 @@ pipeline {
             steps {
                 script {
                     // Clean and build the project, packaging it into a JAR or WAR file
-                    sh 'mvn clean install'
+                    sh 'maven clean install'
                 }
             }
         }
