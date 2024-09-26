@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Clean and build the project, packaging it into a JAR or WAR file
-                    sh 'mvn clean package'
+                    sh 'mvn clean install'
                 }
             }
         }
