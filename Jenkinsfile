@@ -2,7 +2,7 @@ pipeline {
     agent any // Use any available agent
 
     tools {
-        mvn 'Maven 3.9.9'
+        maven 'Maven 3.9.9'
     }
     stages {
         // Stage 0: Cloning the GitHub repository
